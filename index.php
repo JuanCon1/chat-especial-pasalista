@@ -48,5 +48,4 @@ if (isset($_SESSION['unique_id'])) {
   <script src="javascript/signup.js"></script>
 
 </body>
-
 </html>
