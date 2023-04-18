@@ -12,7 +12,7 @@ while ($row = mysqli_fetch_assoc($query)) {
     } else {
         $you = "";
     }
-    ($row['status'] == "Fuera de Línea") ? $offline = "offline" : $offline = "";
+    ($row['status'] == "Desconectado") ? $offline = "offline" : $offline = ""; //STATUS
     ($outgoing_id == $row['unique_id']) ? $hid_me = "hide" : $hid_me = "";
 
     $output .= '<a href="chat.php?user_id=' . $row['unique_id'] . '">

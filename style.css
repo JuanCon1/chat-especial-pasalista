@@ -233,7 +233,7 @@ body{
   color: #468669;
   padding-left: 10px;
 }
-.users-list a .status-dot.offline{
+.users-list a .status-dot.Desconectado{
   color: #ccc;
 }
 
