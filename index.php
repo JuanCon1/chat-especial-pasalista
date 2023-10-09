@@ -10,9 +10,14 @@ if (isset($_SESSION['unique_id'])) {
 <body>
   <div class="wrapper">
     <section class="form signup">
-      <header>CHAT PASALISTA</header>
+      <header>CHAT PASALISTA</header><a href="" title="Pasalista">
+          <img class="mb-8" src="img/Pasalista_img.jpg" alt="Pasalista" width="30%" height="45">
+        </a>
       <form action="#" method="POST" enctype="multipart/form-data" autocomplete="off">
         <div class="error-text"></div>
+        
+
+
         <div class="name-details">
           <div class="field input">
             <label>Tu nombre</label>
@@ -48,4 +53,5 @@ if (isset($_SESSION['unique_id'])) {
   <script src="javascript/signup.js"></script>
 
 </body>
+
 </html>

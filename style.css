@@ -11,7 +11,7 @@ body{
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: #fc7d1c;
+  background: #769ee8;
   padding: 0 10px;
 }
 .wrapper{
@@ -293,7 +293,7 @@ body{
 .outgoing .details p{
   background: #333;
   color: #fff;
-  border-radius: 18px 18px 0 18px;
+  border-radius: 18px 0px 18px 18px;
 }
 .chat-box .incoming{
   display: flex;
