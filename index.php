@@ -11,7 +11,7 @@ if (isset($_SESSION['unique_id'])) {
   <div class="wrapper">
     <section class="form signup">
       <header>CHAT PASALISTA</header><a href="" title="Pasalista">
-          <img class="mb-8" src="img/Pasalista_img.jpg" alt="Pasalista" width="30%" height="45">
+          <img class="mb-8" src="img/Pasalista_img.jpg" alt="Pasalista" width="100%" height="45">
         </a>
       <form action="#" method="POST" enctype="multipart/form-data" autocomplete="off">
         <div class="error-text"></div>
@@ -42,10 +42,10 @@ if (isset($_SESSION['unique_id'])) {
           <input type="file" name="image" accept="image/x-png,image/gif,image/jpeg,image/jpg" required>
         </div>
         <div class="field button">
-          <input type="submit" name="submit" value="Acceder al Chat">
+          <input type="submit" name="submit" value="Registrarme">
         </div>
       </form>
-      <div class="link">Ya te has registrado? <a href="login.php">Ingresa desde acá</a></div>
+      <div class="link">¿Ya te has registrado? <a href="login.php">Ingresa desde acá</a></div>
     </section>
   </div>
 

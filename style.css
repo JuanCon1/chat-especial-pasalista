@@ -293,7 +293,7 @@ body{
 .outgoing .details p{
   background: #333;
   color: #fff;
-  border-radius: 18px 0px 18px 18px;
+  border-radius: 18px 18px 0px 18px;
 }
 .chat-box .incoming{
   display: flex;
@@ -311,7 +311,7 @@ body{
 .incoming .details p{
   background: #fff;
   color: #333;
-  border-radius: 18px 18px 18px 0;
+  border-radius: 18px 18px 18px 0px;
 }
 .typing-area{
   padding: 18px 30px;
