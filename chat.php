@@ -2,7 +2,8 @@
 session_start();
 include_once "php/config.php";
 if (!isset($_SESSION['unique_id'])) {
-  header("location: registro.php");
+  header("location: index.php");
+  exit();
 }
 ?>
 <?php include_once "header.php"; ?>
@@ -11,7 +12,7 @@ if (!isset($_SESSION['unique_id'])) {
   <div class="wrapper">
     <section class="chat-area">
       <header>
-        <a href="users.php" class="back-icon"><i class="fas fa-arrow-left"></i></a>
+        <a href="users.php" class="back-icon" style="color: #28a745;"><i class="fas fa-arrow-left"></i></a>
 
         <!-- ES MI ROW DE USUARIO-->
         <?php $sql = mysqli_query($conn, "SELECT * FROM users WHERE unique_id = {$_SESSION['unique_id']}");
@@ -31,6 +32,7 @@ if (!isset($_SESSION['unique_id'])) {
           $row = mysqli_fetch_assoc($sql);
         } else {
           header("location: users.php");
+          exit();
         }
         ?>
         <img src="php/images/<?php echo $row['img']; ?>" alt="">
@@ -40,7 +42,7 @@ if (!isset($_SESSION['unique_id'])) {
           <span>
             <h style="color:#FF0000">Escríbele a:</h><br> <?php echo $row['fname'] . " " . $row['lname'] ?>
           </span>
-          <p><?php echo $row['status']; ?></p>
+          <p style="color: #28a745;"><?php echo $row['status']; ?></p>
         </div>
       </header>
       <div class="chat-box">

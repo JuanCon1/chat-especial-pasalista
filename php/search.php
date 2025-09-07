@@ -11,6 +11,6 @@ $query = mysqli_query($conn, $sql);
 if (mysqli_num_rows($query) > 0) {
     include_once "data.php";
 } else {
-    $output .= 'No user found related to your search term';
+    $output .= 'No se encontraron usuarios relacionados con tu búsqueda.';
 }
 echo $output;

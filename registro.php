@@ -2,6 +2,7 @@
 session_start();
 if (isset($_SESSION['unique_id'])) {
   header("location: users.php");
+  exit();
 }
 ?>
 
@@ -36,7 +37,7 @@ if (isset($_SESSION['unique_id'])) {
           <i class="fas fa-eye"></i>
         </div>
         <div class="field image">
-          <label>Tu Avatar</label>
+          <label>Tu foto</label>
           <input type="file" name="image" accept="image/x-png,image/gif,image/jpeg,image/jpg" required>
         </div>
         <div class="field button">

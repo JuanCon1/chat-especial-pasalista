@@ -56,10 +56,10 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `unique_id`, `fname`, `lname`, `email`, `password`, `img`, `status`) VALUES
-(1, 273489013, 'Juan', 'Contreras García', 'juancongar@hotmail.com', '202cb962ac59075b964b07152d234b70', '168100592521.jpg', 'Desconectado'),
-(2, 1221922526, 'Industrias ', 'Contreras ', 'ic', '202cb962ac59075b964b07152d234b70', '1681014113INDUSTRIAS CONTRERAS.jpeg', 'Sí Disponible'),
-(3, 1394997565, 'Estrella ', 'de Cristal ', 'estrecris@hotmail.com', '202cb962ac59075b964b07152d234b70', '1681014570IMG-20200830-WA0057.jpg', 'Sí Disponible'),
-(4, 498389806, 'Ivan', 'Newman', 'juancongar@gmail.com', '202cb962ac59075b964b07152d234b70', '1681319556ABUELITO EZEQUIEL.jpeg', 'Sí Disponible');
+(1, 273489013, 'Juan', 'Contreras García', 'juancongar@hotmail.com', '202cb962ac59075b964b07152d234b70', '168100592521.jpg', 'Ausente'),
+(2, 1221922526, 'Industrias ', 'Contreras ', 'ic', '202cb962ac59075b964b07152d234b70', '1681014113INDUSTRIAS CONTRERAS.jpeg', 'Activo'),
+(3, 1394997565, 'Estrella ', 'de Cristal ', 'estrecris@hotmail.com', '202cb962ac59075b964b07152d234b70', '1681014570IMG-20200830-WA0057.jpg', 'Activo'),
+(4, 498389806, 'Ivan', 'Newman', 'juancongar@gmail.com', '202cb962ac59075b964b07152d234b70', '1681319556ABUELITO EZEQUIEL.jpeg', 'Activo');
 
 --
 -- Índices para tablas volcadas

@@ -159,7 +159,10 @@
 
 /* Users List CSS Start */
 .users {
-  padding: 25px 30px;
+    display: flex;
+  flex-direction: column;
+  height: 100vh; /* ocupa toda la ventana */
+  padding: 15px 20px;
 }
 .users header,
 .users-list a {
@@ -286,7 +289,7 @@
   color: #468669;
   padding-left: 10px;
 }
-.users-list a .status-dot.Desconectado {
+.users-list a .status-dot.Ausente {
   color: #ccc;
 }
 
@@ -294,7 +297,7 @@
 .chat-area header {
   display: flex;
   align-items: center;
-  padding: 15px 20px; /* antes 18px 30px */
+  padding: 12px 5px 20px 30px; /* antes 18px 30px */
 }
 .chat-area header .back-icon {
   color: #333;
@@ -307,7 +310,7 @@
 }
 .chat-area header .details span {
   font-size: 17px;
-  font-weight: 500;
+  font-weight: 450;
 }
 .chat-box {
   position: relative;
@@ -455,5 +458,12 @@
   }
   .chat-area form button {
     width: 45px;
+  }
+   /* 🔥 Fuerza que la frase de búsqueda se centre en móviles */
+  .search > div {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
   }
 }

@@ -3,7 +3,7 @@ session_start();
 include_once "php/config.php";
 if (!isset($_SESSION['unique_id'])) {
   header("Location: index.php");
-  exit;
+  exit();
 }
 ?>
 
@@ -26,21 +26,24 @@ if (!isset($_SESSION['unique_id'])) {
           <img src="php/images/<?php echo $row['img']; ?>" alt="">
           <div class="details">
             <span><?php echo $row['fname'] . " " . $row['lname'] ?></span>
-            <p><?php echo $row['status']; ?></p>
+            <p style="display:none;"><?php echo $row['status']; ?></p>
           </div>
         </div>
         <a href="php/logout.php?logout_id=<?php echo $row['unique_id']; ?>" class="logout">Cerrar Sesión
         </a>
       </header>
-      <div class="search" style="margin-top: -10px;">
-        <div style="text-align: center;">
-          <span style="color: green;"><strong>Busca un usuario para mensajear</strong></span>
-        </div>
-        <input type="text" placeholder="Buscar usuario...">
-        <button style="color: green;"><i class="fas fa-search"></i></button>
-      </div>
+      <div class="search" style="margin: -30px 0px 8px 0px;">
+  <div style="display:flex; justify-content:center; width:100%;">
+    <span style="color: green; font-weight:bold;">
+      Busca un usuario para mensajear
+    </span>
+  </div>
+  <input type="text" placeholder="Buscar usuario...">
+  <button style="color: green;"><i class="fas fa-search"></i></button>
+</div>
+
       <div class="users-list">
-      </div>
+      </div> 
     </section>
   </div>
 

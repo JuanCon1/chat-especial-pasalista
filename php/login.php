@@ -12,12 +12,12 @@ if (!empty($email) && !empty($password)) {
         $user_pass = md5($password);
         $enc_pass = $row['password'];
         if ($user_pass === $enc_pass) {
-            $status = "Sí Disponible"; //STATUS
+            $status = "Activo"; //STATUS
             $sql2 = mysqli_query($conn, "UPDATE users SET status = '{$status}' WHERE unique_id = {$row['unique_id']}");
             if ($sql2) {
                 $_SESSION['unique_id'] = $row['unique_id'];
                 echo "success"; // 👈 palabra clave que espera login.js
-                exit;
+                exit();
             } else {
                 echo "Algo salió mal. ¡Inténtalo de nuevo!";
             }

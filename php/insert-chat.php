@@ -11,4 +11,5 @@ if (isset($_SESSION['unique_id'])) {
     }
 } else {
     header("location: ../index.php");
+    exit();
 }

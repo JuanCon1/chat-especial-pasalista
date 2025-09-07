@@ -33,4 +33,5 @@ if (isset($_SESSION['unique_id'])) {
     echo $output;
 } else {
     header("location: ../index.php");
+    exit();
 }
