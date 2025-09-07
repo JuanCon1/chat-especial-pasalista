@@ -6,14 +6,15 @@
   text-decoration: none;
   font-family: "Poppins", sans-serif;
 }
-body {
+/*body {
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
   background: #769ee8;
   padding: 0 10px;
-}
+}*/
+
 .wrapper {
   background: #fff;
   max-width: 450px;
@@ -22,7 +23,15 @@ body {
   box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1),
     0 32px 64px -48px rgba(0, 0, 0, 0.5);
 }
-
+@media screen and (max-width: 500px) {
+  .wrapper {
+    max-width: 100%;
+    border-radius: 0;
+    margin: 0;
+    box-shadow: none;
+    min-height: 90vh;
+  }
+}
 /* Login & Signup Form CSS Start */
 .form {
   padding: 25px 30px;
@@ -120,7 +129,7 @@ body {
 .users-list a {
   display: flex;
   align-items: center;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
   border-bottom: 1px solid #e6e6e6;
   justify-content: space-between;
 }
@@ -213,7 +222,7 @@ body {
   content: "\f00d";
 }
 .users-list {
-  max-height: 350px;
+  max-height: 500px;
   overflow-y: auto;
 }
 :is(.users-list, .chat-box)::-webkit-scrollbar {
@@ -249,7 +258,7 @@ body {
 .chat-area header {
   display: flex;
   align-items: center;
-  padding: 18px 30px;
+  padding: 15px 20px; /* antes 18px 30px */
 }
 .chat-area header .back-icon {
   color: #333;
@@ -258,7 +267,7 @@ body {
 .chat-area header img {
   height: 45px;
   width: 45px;
-  margin: 0 15px;
+  margin: 0 10px; /* antes 0 15px */
 }
 .chat-area header .details span {
   font-size: 17px;
@@ -266,10 +275,11 @@ body {
 }
 .chat-box {
   position: relative;
-  min-height: 500px;
-  max-height: 500px;
+  height: calc(
+    100vh - 210px
+  ); /* ajusta el 210 según lo que mida tu header + typing */
   overflow-y: auto;
-  padding: 10px 30px 20px 30px;
+  padding: 7px 7px 7px 7px; /* antes 10px 30px 20px 30px */
   background: #f7f7f7;
   box-shadow: inset 0 32px 32px -32px rgb(0 0 0 / 5%),
     inset 0 -32px 32px -32px rgb(0 0 0 / 5%);
@@ -286,6 +296,7 @@ body {
   margin: 15px 0;
 }
 .chat-box .chat p {
+  font-size: 15px; /* antes tamaño sin definir (heredaba más grande) */
   word-wrap: break-word;
   padding: 8px 16px;
   box-shadow: 0 0 32px rgb(0 0 0 / 8%), 0rem 16px 16px -16px rgb(0 0 0 / 10%);
@@ -295,7 +306,7 @@ body {
 }
 .chat-box .outgoing .details {
   margin-left: auto;
-  max-width: calc(100% - 130px);
+  max-width: 70%; /* antes calc(100% - 130px) */
 }
 .outgoing .details p {
   background: #333;
@@ -313,7 +324,7 @@ body {
 .chat-box .incoming .details {
   margin-right: auto;
   margin-left: 10px;
-  max-width: calc(100% - 130px);
+  max-width: 70%; /* antes calc(100% - 130px) */
 }
 .incoming .details p {
   background: #fff;
@@ -321,13 +332,13 @@ body {
   border-radius: 18px 18px 18px 0px;
 }
 .typing-area {
-  padding: 18px 30px;
+  padding: 15px 20px; /* antes 18px 30px */
   display: flex;
   justify-content: space-between;
 }
 .typing-area input {
-  height: 45px;
-  width: calc(100% - 58px);
+  height: 40px; /* antes 45px */
+  width: calc(100% - 48px); /* antes calc(100% - 58px) */
   font-size: 16px;
   padding: 0 13px;
   border: 1px solid #e6e6e6;
@@ -336,11 +347,11 @@ body {
 }
 .typing-area button {
   color: #fff;
-  width: 55px;
+  width: 45px; /* antes 55px */
   border: none;
   outline: none;
   background: #333;
-  font-size: 19px;
+  font-size: 17px; /* antes 19px */
   cursor: pointer;
   opacity: 0.7;
   pointer-events: none;
@@ -370,11 +381,6 @@ body {
   .form .name-details .field:last-child {
     margin-left: 0px;
   }
-
-  .users header img {
-    height: 45px;
-    width: 45px;
-  }
   .users header .logout {
     padding: 6px 10px;
     font-size: 16px;
@@ -397,7 +403,7 @@ body {
   .chat-box .chat p {
     font-size: 15px;
   }
-  .chat-box .outogoing .details {
+  .chat-box .outgoing .details {
     max-width: 230px;
   }
   .chat-box .incoming .details {
@@ -406,9 +412,6 @@ body {
   .incoming .details img {
     height: 30px;
     width: 30px;
-  }
-  .chat-area form {
-    padding: 20px;
   }
   .chat-area form input {
     height: 40px;

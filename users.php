@@ -33,9 +33,11 @@ if (!isset($_SESSION['unique_id'])) {
         </a>
       </header>
       <div class="search" style="margin-top: -10px;">
-        <span style="color: green;"><strong>Elige un usuario para chatear</strong></span>
+        <div style="text-align: center;">
+          <span style="color: green;"><strong>Busca un usuario para mensajear</strong></span>
+        </div>
         <input type="text" placeholder="Buscar usuario...">
-        <button><i class="fas fa-search"></i></button>
+        <button style="color: green;"><i class="fas fa-search"></i></button>
       </div>
       <div class="users-list">
       </div>
