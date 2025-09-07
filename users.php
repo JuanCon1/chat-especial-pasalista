@@ -2,9 +2,11 @@
 session_start();
 include_once "php/config.php";
 if (!isset($_SESSION['unique_id'])) {
-  header("location: login.php");
+  header("Location: index.php");
+  exit;
 }
 ?>
+
 <?php include_once "header.php"; ?>
 
 <body>
@@ -27,15 +29,15 @@ if (!isset($_SESSION['unique_id'])) {
             <p><?php echo $row['status']; ?></p>
           </div>
         </div>
-        <a href="php/logout.php?logout_id=<?php echo $row['unique_id']; ?>" class="logout">Cerrar Sesión</a>
+        <a href="php/logout.php?logout_id=<?php echo $row['unique_id']; ?>" class="logout">Cerrar Sesión
+        </a>
       </header>
-      <div class="search">
-        <span class="text">Selecciona un usuario para iniciar el chat</span>
-        <input type="text" placeholder="Enter name to search...">
+      <div class="search" style="margin-top: -10px;">
+        <span style="color: green;"><strong>Elige un usuario para chatear</strong></span>
+        <input type="text" placeholder="Buscar usuario...">
         <button><i class="fas fa-search"></i></button>
       </div>
       <div class="users-list">
-
       </div>
     </section>
   </div>

@@ -10,5 +10,5 @@ if (isset($_SESSION['unique_id'])) {
                                         VALUES ({$incoming_id}, {$outgoing_id}, '{$message}')") or die();
     }
 } else {
-    header("location: ../login.php");
+    header("location: ../index.php");
 }
