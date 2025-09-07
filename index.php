@@ -30,7 +30,7 @@ if (isset($_SESSION['unique_id'])) {
           <input type="submit" name="submit" value="Chatear">
         </div>
       </form>
-      <div class="link">¿Aún no te has registrado? <a href="registro.php">Regístrate acá</a></div>
+      <div class="link">¿Aún no te has registrado? <br> <a href="registro.php">Regístrate acá.</a></div>
     </section>
   </div>
 

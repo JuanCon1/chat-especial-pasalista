@@ -8,7 +8,7 @@ if (isset($_SESSION['unique_id'])) {
 <?php include_once "header.php"; ?>
 
 <body>
-  <div class="wrapper">
+  <div class="wrapper_registro">
     <section class="form signup">
       <a href="" title="Pasalista">
         <img class="mb-8" src="img/Pasalista_img.jpg" alt="Pasalista" width="100%" height="45">
@@ -43,7 +43,7 @@ if (isset($_SESSION['unique_id'])) {
           <input type="submit" name="submit" value="Registrarme">
         </div>
       </form>
-      <div class="link">¿Ya te has registrado? <a href="index.php">Ingresa desde acá</a></div>
+      <div class="link">¿Ya te has registrado? <a href="index.php">Ingresa aquí.</a></div>
     </section>
   </div>
 
