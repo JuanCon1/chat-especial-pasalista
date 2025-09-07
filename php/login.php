@@ -1,8 +1,10 @@
 <?php
 session_start();
 include_once "config.php";
+
 $email = mysqli_real_escape_string($conn, $_POST['email']);
 $password = mysqli_real_escape_string($conn, $_POST['password']);
+
 if (!empty($email) && !empty($password)) {
     $sql = mysqli_query($conn, "SELECT * FROM users WHERE email = '{$email}'");
     if (mysqli_num_rows($sql) > 0) {
@@ -14,7 +16,8 @@ if (!empty($email) && !empty($password)) {
             $sql2 = mysqli_query($conn, "UPDATE users SET status = '{$status}' WHERE unique_id = {$row['unique_id']}");
             if ($sql2) {
                 $_SESSION['unique_id'] = $row['unique_id'];
-                echo "Proceso Exitoso";
+                echo "success"; // 👈 palabra clave que espera login.js
+                exit;
             } else {
                 echo "Algo salió mal. ¡Inténtalo de nuevo!";
             }

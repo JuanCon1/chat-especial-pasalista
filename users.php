@@ -10,6 +10,9 @@ if (!isset($_SESSION['unique_id'])) {
 <body>
   <div class="wrapper">
     <section class="users">
+      <a href="" title="Pasalista">
+        <img class="mb-8" src="img/Pasalista_img.jpg" alt="Pasalista" width="100%" height="45">
+      </a>
       <header>
         <div class="content">
           <?php

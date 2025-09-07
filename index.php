@@ -10,14 +10,12 @@ if (isset($_SESSION['unique_id'])) {
 <body>
   <div class="wrapper">
     <section class="form signup">
-      <header>CHAT PASALISTA</header><a href="" title="Pasalista">
-          <img class="mb-8" src="img/Pasalista_img.jpg" alt="Pasalista" width="100%" height="45">
-        </a>
+      <a href="" title="Pasalista">
+        <img class="mb-8" src="img/Pasalista_img.jpg" alt="Pasalista" width="100%" height="45">
+      </a>
+      <header style="text-align: center;">REGISTRO</header>
       <form action="#" method="POST" enctype="multipart/form-data" autocomplete="off">
         <div class="error-text"></div>
-        
-
-
         <div class="name-details">
           <div class="field input">
             <label>Tu nombre</label>
