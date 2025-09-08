@@ -315,10 +315,10 @@
 .chat-box {
   position: relative;
   height: calc(
-    100vh - 210px
-  ); /* ajusta el 210 según lo que mida tu header + typing */
+    100vh - 170px
+  ); /* AQUÍ SE AJSTA LA ALTURA DEL CHAT */
   overflow-y: auto;
-  padding: 7px 7px 7px 7px; /* antes 10px 30px 20px 30px */
+  padding: 7px 7px 7px 7px; 
   background: #f7f7f7;
   box-shadow: inset 0 32px 32px -32px rgb(0 0 0 / 5%),
     inset 0 -32px 32px -32px rgb(0 0 0 / 5%);

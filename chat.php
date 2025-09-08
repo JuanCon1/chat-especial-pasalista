@@ -20,9 +20,14 @@ if (!isset($_SESSION['unique_id'])) {
           $row = mysqli_fetch_assoc($sql);
         }
         ?>
+        <!-- ES MI IMAGEN DE USUARIO-->
         <img src="php/images/<?php echo $row['img']; ?>" alt="">
-        <?php echo $row['fname'] . " " . $row['lname'] ?>
-        <!-------------------------->
+        
+        <div class="details">
+          
+          <?php echo $row['fname'] ?>
+          <span style="color:#FF0000;  ">Escribe a:</span>
+        </div>
 
         <!-- ES EL ROW DEL OTRO USUARIO-->
         <?php
@@ -35,19 +40,22 @@ if (!isset($_SESSION['unique_id'])) {
           exit();
         }
         ?>
-        <img src="php/images/<?php echo $row['img']; ?>" alt="">
+        <!-- ES LA IMAGEN DEL OTRO USUARIO-->
+        <img src="php/images/<?php echo $row['img']; ?>" alt="">        
         <div class="details">
           <!-------------------------->
 
           <span>
-            <h style="color:#FF0000">Escríbele a:</h><br> <?php echo $row['fname'] . " " . $row['lname'] ?>
+          <?php echo $row['fname'] . " " . $row['lname'] ?>
           </span>
           <p style="color: #28a745;"><?php echo $row['status']; ?></p>
         </div>
-      </header>
-      <div class="chat-box">
 
+      </header>
+
+      <div class="chat-box">
       </div>
+      
       <form action="#" class="typing-area">
         <input type="text" class="incoming_id" name="incoming_id" value="<?php echo $user_id; ?>" hidden>
         <input type="text" name="message" class="input-field" placeholder="Escribe tu mensaje aquí..." autocomplete="off">
